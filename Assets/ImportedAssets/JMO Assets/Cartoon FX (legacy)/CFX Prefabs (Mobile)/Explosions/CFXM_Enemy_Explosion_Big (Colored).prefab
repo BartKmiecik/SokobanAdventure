@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4725349312034268}
   - component: {fileID: 198571357398571362}
   - component: {fileID: 199983583505199436}
-  - component: {fileID: 114814715890196128}
   m_Layer: 0
   m_Name: CFXM_Enemy_Explosion_Big (Colored)
   m_TagString: FxTemporaire
@@ -4706,19 +4705,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &114814715890196128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418291979334594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fd2e8874f60266498a388d7229a1bac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnlyDeactivate: 0
 --- !u!1 &1763611207360914
 GameObject:
   m_ObjectHideFlags: 0
