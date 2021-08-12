@@ -13,9 +13,10 @@ public class LevelSpawner : MonoBehaviour
     public Ease ease2;
     public float duration;
     [SerializeField] private List<Transform> jumpBoxes = new List<Transform>();
-
+    private ShowTutorial showTutorial;
     private void Awake()
     {
+        showTutorial = GetComponent<ShowTutorial>();
         audioManager = FindObjectOfType<AudioManager>();
     }
     public void SpawnLevel()
@@ -42,9 +43,17 @@ public class LevelSpawner : MonoBehaviour
             .OnComplete(() => JumpBox()))
             .Append(ChakeChilds());
 
+        if (level == 0)
+        {
+            StartCoroutine(ShowTutorail());
+        }
     }
 
-
+    IEnumerator ShowTutorail()
+    {
+        yield return new WaitForSeconds(1.75f);
+        showTutorial.ShowTutorialPanel();
+    }
 
     public void RestartLevel()
     {

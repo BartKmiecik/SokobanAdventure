@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     private MoveCounter moveCounter;
 
     private AudioManager audioManager;
+    private GameObject hints;
     private void Awake()
     {
         audioManager = FindObjectOfType<AudioManager>();
@@ -134,5 +135,22 @@ public class GameManager : MonoBehaviour
         isGameStart = false;
         timeCounter.SetGameState(false);
         SceneManager.LoadScene(0);
+    }
+
+    public void SetHintsObject(GameObject obj)
+    {
+        if(obj != null)
+        {
+            hints = obj;
+        }
+    }
+
+    public void ShowHideHints()
+    {
+        if(hints != null)
+        {
+            bool active = hints.activeInHierarchy;
+            hints.SetActive(!active);
+        }
     }
 }
