@@ -960,6 +960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6159208837092040957}
   - component: {fileID: 8346412536516345126}
+  - component: {fileID: 2751463636137656445}
   m_Layer: 0
   m_Name: Hints
   m_TagString: Untagged
@@ -999,6 +1000,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99b9e9a553f5bdd4e98c5aff3ca5f30b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hints: {fileID: 8788376827003191039}
+--- !u!114 &2751463636137656445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8788376827003191039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5efe9d0076576c147a8618bd18bd66c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8845974842617934217

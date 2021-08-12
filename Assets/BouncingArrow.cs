@@ -25,14 +25,20 @@ public class BouncingArrow : MonoBehaviour
         rend.enabled = false;
         col.enabled = false;
     }
-    private void Start()
+
+    private void OnDisable()
     {
+        StopAllCoroutines();
+    }
+    private void OnEnable()
+    {
+        StopAllCoroutines();
         StartCoroutine(DeleayStart());
     }
-
+    
     IEnumerator DeleayStart()
     {
-        yield return new WaitForSeconds(2f);
+        rend.enabled = true;
 
         switch (dir)
         {
@@ -49,6 +55,32 @@ public class BouncingArrow : MonoBehaviour
                 transform.DOMoveX(.3f + startingPos.x, 1f, false).From(-.3f + startingPos.x, true, false).SetLoops(-1);
                 break;
         }
+
+        yield return new WaitForSeconds(.5f);
+        col.enabled = true;
+    }
+
+    public IEnumerator DeleyDisplay()
+    {
+        StopCoroutine(DeleayStart());
+        rend.enabled = false;
+        yield return new WaitForSeconds(2f);
+        switch (dir)
+        {
+            case BouncingDirection.down:
+                transform.DOMoveZ(-.3f + startingPos.z, 1f, false).From(.3f + startingPos.z, true, false).SetLoops(-1);
+                break;
+            case BouncingDirection.top:
+                transform.DOMoveZ(.3f + startingPos.z, 1f, false).From(-.3f + startingPos.z, true, false).SetLoops(-1);
+                break;
+            case BouncingDirection.left:
+                transform.DOMoveX(-.3f + startingPos.x, 1f, false).From(.3f + startingPos.x, true, false).SetLoops(-1);
+                break;
+            case BouncingDirection.right:
+                transform.DOMoveX(.3f + startingPos.x, 1f, false).From(-.3f + startingPos.x, true, false).SetLoops(-1);
+                break;
+        }
+
         rend.enabled = true;
         col.enabled = true;
     }

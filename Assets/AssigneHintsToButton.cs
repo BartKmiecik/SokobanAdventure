@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class AssigneHintsToButton : MonoBehaviour
 {
+    [SerializeField] private GameObject hints;
     void Start()
     {
-        FindObjectOfType<GameManager>().SetHintsObject(this.gameObject);
+        FindObjectOfType<GameManager>().SetHintsObject(hints);
     }
 
 }

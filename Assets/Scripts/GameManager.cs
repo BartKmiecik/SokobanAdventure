@@ -17,7 +17,13 @@ public class GameManager : MonoBehaviour
     private MoveCounter moveCounter;
 
     private AudioManager audioManager;
+    
     private GameObject hints;
+    public GameObject Hints
+    {
+        get { return hints; }
+    }
+
     private void Awake()
     {
         audioManager = FindObjectOfType<AudioManager>();

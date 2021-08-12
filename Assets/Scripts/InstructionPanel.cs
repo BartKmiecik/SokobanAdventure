@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InstructionPanel : MonoBehaviour
 {
-    [SerializeField] private GameObject firstScreen, secondScreen, thirdScreen;
+    [SerializeField] private GameObject firstScreen, secondScreen, thirdScreen, fourthScreen;
 
     private void OnEnable()
     {
@@ -12,6 +12,7 @@ public class InstructionPanel : MonoBehaviour
         firstScreen.SetActive(true);
         secondScreen.SetActive(false);
         thirdScreen.SetActive(false);
+        fourthScreen.SetActive(false);
     }
 
     private void OnDisable()
