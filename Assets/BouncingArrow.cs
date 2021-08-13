@@ -89,8 +89,10 @@ public class BouncingArrow : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            if(transform.GetSiblingIndex() == 0) {
+                Destroy(gameObject);
+            }
+            
         }
-
     }
 }
