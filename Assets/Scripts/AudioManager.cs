@@ -40,6 +40,7 @@ public class AudioManager : MonoBehaviour
         music = PlayerPrefs.GetFloat("Music", 1);
         effects = PlayerPrefs.GetFloat("Effects", 1);
         SetMusicVolume(music);
+        SetEffectsVolume(effects);
         PlayList();
     }
 
