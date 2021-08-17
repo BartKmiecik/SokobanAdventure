@@ -84,12 +84,12 @@ public class AudioManager : MonoBehaviour
     {
         CancelInvoke("PlayList");
         Play(sounds[backgroundIndex].name);
+        Invoke("PlayList", sounds[backgroundIndex].clip.length);
         ++backgroundIndex;
         if (backgroundIndex >= 3)
         {
             backgroundIndex = 0;
         }
-        Invoke("PlayList", sounds[backgroundIndex].clip.length);
     }
 
     public void SetVolume(string name, float value)
